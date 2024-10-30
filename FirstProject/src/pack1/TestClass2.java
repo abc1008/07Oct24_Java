@@ -4,11 +4,27 @@ package pack1;
 public class TestClass2
 {
 
+	
+	
 	int num = 10;
 	
 	public static void main(String[] args)
 	{
 
+		
+		// ClassName.methodName();
+		
+		MethodDiscussion.method1();
+		MethodDiscussion.addition();
+
+		
+		// Syntax 
+		
+		MethodDiscussion refObject =  new MethodDiscussion();
+		refObject.nonStaticMethod1_MethodDiscussion();
+		
+		
+		
 //		String s1 = "Hellouuhjvb";  camel Convention/casing
 //
 //		System.out.println("s1 refers to : " + s1);
@@ -31,14 +47,17 @@ public class TestClass2
 
 			if (i == 3)
 			{
+				i++;
 				continue;
 			}
 			
+			String s1 = "";
 
 			System.out.println("ABC " + i);
 			i++;
 
 		}
+		
 		System.out.println("Out of while loop");
 
 		// do while

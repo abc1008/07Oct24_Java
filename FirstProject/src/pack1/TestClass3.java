@@ -35,6 +35,16 @@ public class TestClass3
 		
 		
 		
+		// ClassName refeenceVariableName = new ClassName();
+		
+		TestClass3 ref1 = new TestClass3();   // object
+		
+		TestClass3 ref2 = new TestClass3(); 
+		
+		TestClass1 ref3 = new TestClass1();
+		
+		
+		
 		
 //		switch(expression)
 //		{

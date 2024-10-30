@@ -8,6 +8,10 @@ public class Switchcase
 	{
 		
 		int dayNum = 2;
+		
+		String a = "";
+		
+		
 		System.out.println("Code change via GIT");
 		
 		switch(dayNum)

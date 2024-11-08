@@ -7,6 +7,8 @@ public class Switchcase
 	public static void main(String[] args)
 	{
 		
+		Switchcase s1 = new Switchcase();
+		
 		int dayNum = 2;
 		
 		String a = "";

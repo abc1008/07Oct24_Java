@@ -1,6 +1,7 @@
 package pack1;
 
-public class Switchcase
+
+class Switchcase
 {
 	
 	

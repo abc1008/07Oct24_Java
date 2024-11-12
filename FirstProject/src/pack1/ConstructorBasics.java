@@ -1,6 +1,6 @@
 package pack1;
 
-public class ConstructorBasics
+public class ConstructorBasics  
 {
 
 	

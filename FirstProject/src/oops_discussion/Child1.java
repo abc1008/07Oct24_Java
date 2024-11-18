@@ -1,5 +1,7 @@
 package oops_discussion;
 
+import access_modifiers.ClassB;
+
 public class Child1 extends Parent
 {
 	
@@ -60,6 +62,10 @@ public class Child1 extends Parent
 //		System.out.println(s2);
 		
 
+		
+//		System.out.println(ClassB.a);
+//		
+//		ClassB.m1();
 		
 		
 		

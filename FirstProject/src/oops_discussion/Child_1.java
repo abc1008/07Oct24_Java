@@ -11,7 +11,6 @@ public class Child_1 extends Parent_1
 
 		return 10;
 	}
-	
 
 
 	public void m3(int a) // overloaded

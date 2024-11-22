@@ -54,12 +54,10 @@ public class Child_1 extends Parent_1
 		System.out.println();
 		System.out.println("*** Parent_1 ref + Child obj ***");
 		System.out.println();
-
 		
 		
 		Parent_1 ref3 = new Child_1(); // Parent_1 ref + Child obj
 		ref3.m1(); // Overridden : object will decide which method to call
-		ref3.m2(6); // Overridden : object will decide which method to call
 		ref3.m3(); // overloading :ref variable will decide which method to call
 		System.out.println(ref3.var1);
 		

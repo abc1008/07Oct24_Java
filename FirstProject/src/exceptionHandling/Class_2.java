@@ -40,15 +40,15 @@ public class Class_2
 		try
 		{
 			int []  arr = {5,6,7,8,9};
-			System.out.println(arr[2]);
-//			System.out.println(arr[8]);
+//			System.out.println(arr[2]);
+			System.out.println(arr[8]);
 			
 			System.out.println("After array");
 			
 			// db coonect open 
 			// exception
 		}
-		catch(Exception ex)
+		catch(RuntimeException ex) 
 		{
 			System.out.println("Exception Found : "+ ex.getMessage());
 			
@@ -58,7 +58,6 @@ public class Class_2
 			System.out.println("finally block");
 		}
 
-		
 		System.out.println("After try-catch");
 		
 		// connect close

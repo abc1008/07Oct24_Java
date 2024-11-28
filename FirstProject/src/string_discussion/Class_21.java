@@ -22,18 +22,25 @@ public class Class_21
 		System.out.println(concatString);
 		
 		
-//		String s1 = "Testometer";
+		s1 = "Testometer";
 		
 //		3. charAt(int index);
 		
 		System.out.println(s1.charAt(1));
 //		System.out.println(s1.charAt(1));
 //		System.out.println(s1.charAt(2));
+
+
+//		true = 1
+//		false = 0;
+//		null = -1;
+		
 		
 		for(int index = 0; index < s1.length(); index++)
 		{
 			System.out.println(s1.charAt(index));
 		}
+		
 		
 
 //		4. equals()
@@ -41,7 +48,7 @@ public class Class_21
 		 boolean result = s1.equals("testometer");
 		System.out.println(result);
 		
-//		String s1 = "Testometer";
+		s1 = "Testometer";
 		
 //		5. equalsIgnoreCase();
 		
@@ -63,6 +70,79 @@ public class Class_21
 		
 		
 		
+		s1 = "Testometer";
+		
+		
+//		9.  touppercase and tolowercase
+		
+		
+		System.out.println(s1.toUpperCase());
+		
+		System.out.println(s1.toLowerCase());
+		
+		
+		String s2 = "  java     ";
+		
+		
+		
+//		10. trim()
+		
+		System.out.println(s2);
+		
+		 String ans = s2.trim();
+		
+		System.out.println(ans);
+		
+		
+		s1 = "Testoteter";
+
+		
+//		11. indexOf()
+		
+		int index = s1.indexOf('t');  // first occurance
+		
+		System.out.println(index);
+		
+		
+//		12. lastIndexOf()
+		
+		int Lindex =  s1.lastIndexOf('t');  // last occurance
+		System.out.println(Lindex);
+		
+		
+//		13. contains(charseq);
+		
+		boolean result4 = s1.contains("Meter");
+		System.out.println(result4);
+		
+		
+//		 s1 = "Testometerttt";  // reinitialization  -  1 object
+//		 s1 = s1.concat(" abc");    // Testometerttt abc
+		 
+//		 String s4 = new String("Testometerttt");
+		 
+		 System.out.println(s1);
+		
+//		14. toCharArray();
+		
+		
+		  char[] chArray = s1.toCharArray();
+		  
+		  System.out.println(chArray[3]);
+		  System.out.println(chArray.length);
+		  
+		  
+			s1 = "Testometer";
+		  
+//		  15. split();
+		  
+		 String[] var1 = s1.split("o");
+		
+		 System.out.println(var1[0]);
+		 System.out.println(var1[1]);
+		 
+		 
+		 
 		
 		
 	}

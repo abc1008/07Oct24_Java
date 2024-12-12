@@ -11,6 +11,7 @@ public class Checkbox
 	public static void main(String[] args) throws InterruptedException
 	{
 		
+		
 		WebDriver driver = null;
 
 		String browserName = "CHROME";

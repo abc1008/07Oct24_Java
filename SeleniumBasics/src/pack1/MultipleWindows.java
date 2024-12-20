@@ -38,7 +38,7 @@ public class MultipleWindows
 		
 		System.out.println("Parent Window : " + winHandle);
 		
-		Thread.sleep(5000);
+		Thread.sleep(20000);
 		driver.findElement(By.linkText("OrangeHRM, Inc")).click();
 		driver.findElement(By.linkText("OrangeHRM, Inc")).click();
 		driver.findElement(By.linkText("OrangeHRM, Inc")).click();
@@ -53,8 +53,19 @@ public class MultipleWindows
 		
 		for( String window : allWinds)
 		{
-			System.out.println(window);
+			
+			if(!window.equals(winHandle))
+			{
+//			
+				driver.switchTo().window(window);   // to switch the focus
+				System.out.println("Switched : " +window);
+				Thread.sleep(2000);
+			}
+			
 		}
+		
+		
+		
 		
 		
 	}

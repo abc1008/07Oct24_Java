@@ -22,7 +22,7 @@ public class JSMethods
 	/**
 	 * Method to perform scroll operation over a WebElement
 	 * @param driver
-	 * @param ele
+	 * @param ele 
 	 */
 	public static void scrollTo(WebDriver driver, WebElement ele)
 	{

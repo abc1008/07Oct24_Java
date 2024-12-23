@@ -33,7 +33,7 @@ public class ActionsClass
 		
 		driver.manage().window().maximize();
 		driver.get("https://tutorialsninja.com/demo/");
-		Thread.sleep(4000);
+		Thread.sleep(10000);   
 		
 		WebElement mp3 = driver.findElement(By.xpath("//a[text()='MP3 Players']"));
 		

@@ -48,7 +48,6 @@ public class WaitsDiscussion2
 		// Explicit Wait Syntax:
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		
-		
 		wait.until(ExpectedConditions.alertIsPresent());
 		
 		driver.switchTo().alert().accept();

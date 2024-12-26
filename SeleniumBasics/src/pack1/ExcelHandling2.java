@@ -19,18 +19,23 @@ public class ExcelHandling2
 		FileInputStream file = new FileInputStream(path);  // let java know about the file
 		XSSFWorkbook wb = new XSSFWorkbook(file);   // load/open the file
 		XSSFSheet sheet = wb.getSheet("Sheet6");  //open excel sheet
-		XSSFRow row = sheet.getRow(2);  // get the row
-		XSSFCell cell = row.getCell(1);   // get the cell
 		
+		XSSFRow createdRow = sheet.createRow(5);
+		XSSFCell createdCell = createdRow.createCell(2);
 		
+//		XSSFRow row = sheet.getRow(4);  // get the row
+//		XSSFCell cell = row.getCell(1);   // get the cell
 		
 		
 		// To write the data into excel
 		FileOutputStream fout = new FileOutputStream(path);
-		cell.setCellValue(true);   // writiting the data in excel
+		createdCell.setCellValue("Udpated Created Cell Value");   // writiting the data in excel
 		wb.write(fout);  // save the updated workbook
 		
 		System.out.println("Completed");
+		
+		
+		
 		
 		
 

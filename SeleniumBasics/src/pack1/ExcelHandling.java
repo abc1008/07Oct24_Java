@@ -23,9 +23,13 @@ public class ExcelHandling
 		
 		String data = cell.getStringCellValue();  // to read numeric data
 		
-		double numData = cell.getNumericCellValue();   // to read numeric data
+//		double numData = cell.getNumericCellValue();   // to read numeric data
 		
-		System.out.println(numData);
+		
+		
+		
+		
+		System.out.println(data);
 	}
 	
 	

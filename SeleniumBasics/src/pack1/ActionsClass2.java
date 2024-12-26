@@ -15,7 +15,7 @@ public class ActionsClass2
 		
 		WebDriver driver = null;
 
-		String browserName = "CHROME";
+		String browserName = "EDGE";
 
 		if (browserName.equals("CHROME"))
 		{

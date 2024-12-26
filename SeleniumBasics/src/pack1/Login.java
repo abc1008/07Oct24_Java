@@ -1,7 +1,9 @@
 package pack1;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -12,18 +14,24 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
-import com.google.common.io.Files;
 
 import utility.CaptureScreen;
+import utility.CommonOps;
 import utility.JSMethods;
 
 public class Login
 {
 	public static WebDriver driver = null;
+	
+	
 
 	public static void main(String[] args) throws InterruptedException, IOException
 	{
-		String browserName = "CHROME";
+		
+//		System.out.println(browser);
+		
+		
+		String browserName = CommonOps.readConfig("Browser");
 
 		if (browserName.equals("CHROME"))
 		{
@@ -38,19 +46,20 @@ public class Login
 			driver = new EdgeDriver();
 			System.out.println("Invlid browser.");
 		}
+		
 
 		driver.manage().window().maximize();
-		driver.get("https://tutorialsninja.com/demo/index.php?route=account/login");
+		driver.get(CommonOps.readConfig("TestSiteURL"));
 		Thread.sleep(2000);
 
 		// locate the webelemet
 		WebElement email = driver.findElement(By.id("input-email"));
-		email.sendKeys("adipersonal570@gmail.com");
+		email.sendKeys(CommonOps.readConfig("UserID"));
 
 		Thread.sleep(2000);
 
 		WebElement password = driver.findElement(By.name("password"));
-		password.sendKeys("Unlock@123");
+		password.sendKeys(CommonOps.readConfig("Password"));
 
 		Thread.sleep(2000);
 //		driver.findElement(By.xpath("//input[@type='submit']")).click();

@@ -98,6 +98,9 @@ public class TestClass1
 		sArray2[2] = "S7";
 		
 		
+		Switchcase s5 = new Switchcase();
+		
+		
 	}
 	
 	

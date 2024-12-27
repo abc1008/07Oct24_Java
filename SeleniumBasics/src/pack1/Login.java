@@ -23,6 +23,10 @@ public class Login
 {
 	public static WebDriver driver = null;
 	
+	public void m1()
+	{
+		
+	}
 	
 
 	public static void main(String[] args) throws InterruptedException, IOException

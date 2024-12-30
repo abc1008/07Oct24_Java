@@ -44,6 +44,14 @@ public class ActionsClass
 		Thread.sleep(2000);
 		WebElement allMp3 = driver.findElement(By.xpath("//a[text()='Show AllMP3 Players']"));
 		act.click(allMp3).perform();  // click
+		
+		
+		driver.close();  // currently focused window
+
+		
+		driver.quit();   // close entire browser
+		
+		
 	
 	}
 	

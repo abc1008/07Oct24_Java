@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Testometer">
+	
+  <test thread-count="5" name="TestCases_Practice1">
+    <classes>
+      <class name="testPack1.TestClass_2"/>
+      <class name="testPack1.TestClass_3"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="TestCases_Practice2">
+    <classes>
+      <class name="testPack1.TestClass_2"/>
+      <class name="testPack1.TestClass_3"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+</suite> <!-- Suite -->

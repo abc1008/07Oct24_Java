@@ -6,6 +6,8 @@
       <class name="testPack1.TestClass5">
         <methods>
           <include name="m3"/>
+          <include name="m6"/>
+          <include name="m4"/>
         </methods>
       </class> <!-- testPack1.TestClass5 -->
       <class name="testPack1.TestClass4">
@@ -13,6 +15,8 @@
           <include name="m1"/>
           <include name="m2"/>
           <include name="m10"/>
+          <include name="m7"/>
+          <include name="m8"/>
         </methods>
       </class> <!-- testPack1.TestClass4 -->
     </classes>

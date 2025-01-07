@@ -8,17 +8,20 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage
 {
-	// variables - 
-	@FindBy(xpath = "//input[@placeholder='Email']")
-	private WebElement textBoxUserIdByXpath;
+	// variables -  variable Name :  controlName_FielName_Locator
+	private final String textBoxUserIdByXpath = "//input[@placeholder='Email']";
+	private final String textBoxPasswordByXpath = "//input[@placeholder='Password']";
+	private final String buttonLoginByXpath = "//button[@type='submit']";
 	
-	@FindBy(xpath = "//input[@placeholder='Password']")
-	private WebElement textBoxPasswordByXpath;
 	
-	@FindBy(xpath = "//button[@type='submit']")
-	private WebElement buttonLoginByXpath;
+	@FindBy(xpath = textBoxUserIdByXpath)
+	private WebElement textBoxUserId;
 	
-	// variable Name :  controlName_FielName_Locator
+	@FindBy(xpath = textBoxPasswordByXpath)
+	private WebElement textBoxPassword;
+	
+	@FindBy(xpath = buttonLoginByXpath)
+	private WebElement buttonLogin;
 	
 	
 	// constructor
@@ -30,9 +33,9 @@ public class LoginPage
 	// methods
 	public void login()
 	{
-		textBoxUserIdByXpath.sendKeys("adityaganjkar88@gmail.com");
-		textBoxPasswordByXpath.sendKeys("abcd@1234");
-		buttonLoginByXpath.click();
+		textBoxUserId.sendKeys("adityaganjkar88@gmail.com");
+		textBoxPassword.sendKeys("abcd@1234");
+		buttonLogin.click();
 	}
 	
 	

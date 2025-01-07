@@ -1,9 +1,10 @@
 package testScriptClasses;
 
+import basePack.BaseClass;
 import pageClasses.LoginPage;
 import testSuits.LoginTestSuite;
 
-public class LoginTestScript extends LoginTestSuite
+public class LoginTestScript extends BaseClass
 {
 	
 	public void performLogin()

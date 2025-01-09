@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-07T21:10:37 IST" name="Default suite" finished-at="2025-01-07T21:11:08 IST" duration-ms="30324">
+  <suite started-at="2025-01-09T20:41:25 IST" name="Default suite" finished-at="2025-01-09T20:42:11 IST" duration-ms="45510">
     <groups>
     </groups>
-    <test started-at="2025-01-07T21:10:37 IST" name="Default test" finished-at="2025-01-07T21:11:08 IST" duration-ms="30324">
+    <test started-at="2025-01-09T20:41:25 IST" name="Default test" finished-at="2025-01-09T20:42:11 IST" duration-ms="45510">
       <class name="testSuits.ChangePasswordTestSuite">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testSuits.ChangePasswordTestSuite@25fb8912]" started-at="2025-01-07T21:10:37 IST" name="launchBrowser" finished-at="2025-01-07T21:10:42 IST" duration-ms="4718" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testSuits.ChangePasswordTestSuite@25fb8912]" started-at="2025-01-09T20:41:25 IST" name="launchBrowser" finished-at="2025-01-09T20:41:30 IST" duration-ms="5245" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="login()[pri:0, instance:testSuits.ChangePasswordTestSuite@25fb8912]" started-at="2025-01-07T21:10:42 IST" name="login" finished-at="2025-01-07T21:10:43 IST" duration-ms="985" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:testSuits.ChangePasswordTestSuite@25fb8912]" started-at="2025-01-09T20:41:30 IST" name="login" finished-at="2025-01-09T20:41:32 IST" duration-ms="1102" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="TC123_ChangePasswordTest()[pri:0, instance:testSuits.ChangePasswordTestSuite@25fb8912]" started-at="2025-01-07T21:10:43 IST" name="TC123_ChangePasswordTest" finished-at="2025-01-07T21:11:07 IST" duration-ms="23567" status="PASS">
+        <test-method signature="TC123_ChangePasswordTest()[pri:0, instance:testSuits.ChangePasswordTestSuite@25fb8912]" started-at="2025-01-09T20:41:32 IST" name="TC123_ChangePasswordTest" finished-at="2025-01-09T20:41:57 IST" duration-ms="25836" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC123_ChangePasswordTest -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:testSuits.ChangePasswordTestSuite@25fb8912]" started-at="2025-01-07T21:11:07 IST" name="logout" finished-at="2025-01-07T21:11:07 IST" duration-ms="690" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:testSuits.ChangePasswordTestSuite@25fb8912]" started-at="2025-01-09T20:41:57 IST" name="logout" finished-at="2025-01-09T20:42:09 IST" duration-ms="11736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testSuits.ChangePasswordTestSuite@25fb8912]" started-at="2025-01-07T21:11:07 IST" name="closeBrowser" finished-at="2025-01-07T21:11:08 IST" duration-ms="309" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testSuits.ChangePasswordTestSuite@25fb8912]" started-at="2025-01-09T20:42:09 IST" name="closeBrowser" finished-at="2025-01-09T20:42:11 IST" duration-ms="1544" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

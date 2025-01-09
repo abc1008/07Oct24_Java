@@ -1,20 +1,20 @@
 package testScriptClasses;
 
+import java.io.IOException;
+
 import basePack.BaseClass;
-import pageClasses.ChangePasswordPage;
-import pageClasses.DashboardPage;
+import utility.TestometerObjects;
 
 public class ChangePasswordTestScript extends BaseClass
 {
 	
-	public void performChangePassword()
+	public void performChangePassword() throws IOException
 	{
-		DashboardPage dp = new DashboardPage(driver);  // initializing variables
-		dp.selectNewVersionFromLeftMenu();
 		
+		TestometerObjects.dashboardPage().selectNewVersionFromLeftMenu();
 		
-		ChangePasswordPage cp = new ChangePasswordPage(driver);
-		cp.changePassword();
+		TestometerObjects.changePasswordPage().changePassword();
+		
 	}
 	
 	

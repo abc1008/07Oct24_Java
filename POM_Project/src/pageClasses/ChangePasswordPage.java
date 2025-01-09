@@ -1,5 +1,6 @@
 package pageClasses;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -8,6 +9,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utility.CaptureScreen;
+import utility.WaitHelpers;
 
 public class ChangePasswordPage
 {
@@ -46,7 +50,7 @@ public class ChangePasswordPage
 	}
 
 	// methods
-	public void changePassword()
+	public void changePassword() throws IOException
 	{
 		dropdownUser.click();
 		buttonChangePass.click();
@@ -60,12 +64,18 @@ public class ChangePasswordPage
 		{
 			System.out.println("Password updated successfully");
 			
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			wait.until(ExpectedConditions.invisibilityOf(alertSuccess));
+//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//			wait.until(ExpectedConditions.invisibilityOf(alertSuccess));
+			
+			new WaitHelpers(driver).WaitForEleToBeVisible(alertSuccessByXpath);
+			
+			
+			
 		} 
 		else
 		{
 			System.out.println("Failed to update Password.");
+			CaptureScreen.printScreen("TestFile", driver);
 		}
 	}
 

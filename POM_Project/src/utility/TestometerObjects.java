@@ -3,6 +3,7 @@ package utility;
 import basePack.BaseClass;
 import pageClasses.ChangePasswordPage;
 import pageClasses.DashboardPage;
+import pageClasses.HeaderPage;
 
 public class TestometerObjects extends BaseClass
 {
@@ -19,6 +20,13 @@ public class TestometerObjects extends BaseClass
 	{
 		_dashboardPage = new DashboardPage(driver);
 		return _dashboardPage;
+	}
+	
+	private static HeaderPage _headerPage;
+	public static HeaderPage headerPage()
+	{
+		_headerPage = new HeaderPage(driver);
+		return _headerPage;
 	}
 	
 	

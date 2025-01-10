@@ -2,6 +2,7 @@ package pageClasses;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utility.CaptureScreen;
+import utility.SeleniumEventHelpers;
 import utility.WaitHelpers;
 
 public class ChangePasswordPage
@@ -39,7 +41,7 @@ public class ChangePasswordPage
 	private WebElement buttonUpdate;
 
 	@FindBy(xpath = alertSuccessByXpath)
-	private WebElement alertSuccess;
+	private List<WebElement> alertSuccess;
 
 	
 	// constructor
@@ -50,33 +52,38 @@ public class ChangePasswordPage
 	}
 
 	// methods
-	public void changePassword() throws IOException
+	public boolean changePassword() throws IOException
 	{
-		dropdownUser.click();
-		buttonChangePass.click();
-		textBoxPassword.sendKeys("abcd@1234");
-		textBoxConfPassword.sendKeys("abcd@1234");
-		buttonUpdate.click();
-
-		boolean isSuccess = alertSuccess.isDisplayed();
-
-		if (isSuccess == true)
+		boolean testResult = true;
+		
+		try
 		{
-			System.out.println("Password updated successfully");
-			
-//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//			wait.until(ExpectedConditions.invisibilityOf(alertSuccess));
-			
-			new WaitHelpers(driver).WaitForEleToBeVisible(alertSuccessByXpath);
-			
-			
-			
-		} 
-		else
-		{
-			System.out.println("Failed to update Password.");
-			CaptureScreen.printScreen("TestFile", driver);
+			SeleniumEventHelpers.DoClick(dropdownUser);
+			buttonChangePass.click();
+			textBoxPassword.sendKeys("abcd@1234");
+			textBoxConfPassword.sendKeys("abcd@1234");
+			buttonUpdate.click();
+
+			if (alertSuccess.size() > 0)
+			{
+				System.out.println("Password updated successfully");
+				new WaitHelpers(driver).WaitForEleToBeInVisible(alertSuccessByXpath);
+				
+			} 
+			else
+			{
+				System.out.println("Failed to update Password.");
+				CaptureScreen.printScreen("TestFile", driver);
+				testResult = false;
+			}
 		}
+		catch (Exception ex) 
+		{
+			System.out.println("Exception found in method 'changePassword' : "+ex.getMessage());
+			testResult = false;
+		}
+		
+		return testResult;
 	}
 
 }

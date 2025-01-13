@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utility.ExtentReportHelper;
 import utility.WaitHelpers;
 
 public class HeaderPage
@@ -55,16 +56,17 @@ public class HeaderPage
 
 			if (buttonLogin.size() != 0)
 			{
-				System.out.println("Logout is successful");
+				ExtentReportHelper.logPass("Logout is successful");
 				testResult = true;
-			} else
+			} 
+			else
 			{
-				System.out.println("Logout is failed");
+				ExtentReportHelper.logFail("Logout is failed");
 			}
 		} 
 		catch (Exception ex)
 		{
-			System.out.println("Exception found in method 'changePassword' : " + ex.getMessage());
+			ExtentReportHelper.logFail("Exception found in method 'logout' :"+ex.getMessage());
 			testResult = false;
 		}
 

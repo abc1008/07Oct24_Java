@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import testScriptClasses.HeaderTestScript;
 import testScriptClasses.LoginTestScript;
 import utility.CommonOps;
+import utility.ExtentReportHelper;
 
 public class BaseClass
 {
@@ -34,6 +35,8 @@ public class BaseClass
 		
 		
 		driver.manage().window().maximize();
+		ExtentReportHelper extentReportHelper = new ExtentReportHelper();
+		ExtentReportHelper.startTest("Test_1");
 		driver.get(CommonOps.readConfig("TestSiteURL"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
@@ -42,6 +45,7 @@ public class BaseClass
 	@BeforeMethod
 	public void login() throws IOException
 	{
+
 		LoginTestScript loginTest = new LoginTestScript();
 		loginTest.performLogin();
 	}
@@ -59,6 +63,7 @@ public class BaseClass
 	@AfterClass
 	public void closeBrowser()
 	{
+		ExtentReportHelper.endTest();
 		driver.quit();  
 	}
 	

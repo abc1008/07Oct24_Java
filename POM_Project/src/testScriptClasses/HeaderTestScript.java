@@ -3,6 +3,7 @@ package testScriptClasses;
 
 import basePack.BaseClass;
 import pageClasses.HeaderPage;
+import utility.ExtentReportHelper;
 import utility.TestometerObjects;
 
 public class HeaderTestScript extends BaseClass
@@ -15,17 +16,20 @@ public class HeaderTestScript extends BaseClass
 		{
 			if(TestometerObjects.headerPage().logout() == true)
 			{
-				System.out.println("Logout is successful");
+//				System.out.println("Logout is successful");
+				ExtentReportHelper.logPass("Logout is successful");
 				testResult = true;
 			}
 			else
 			{
-				System.out.println("Logout is failed");
+//				System.out.println("Logout is failed");
+				ExtentReportHelper.logFail("Logout is failed.");
 			}
 		}
 		catch (Exception ex) 
 		{
-			System.out.println("Exception found in method 'performChangePassword' : "+ex.getMessage());
+			ExtentReportHelper.logFail("Exception found in method 'performLogout' :"+ex.getMessage());
+			testResult = false;
 		}
 		return testResult;
 	}

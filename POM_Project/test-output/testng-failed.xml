@@ -5,7 +5,11 @@
     <classes>
       <class name="testSuits.ChangePasswordTestSuite">
         <methods>
+          <include name="login"/>
           <include name="TC123_ChangePasswordTest"/>
+          <include name="launchBrowser"/>
+          <include name="logout"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- testSuits.ChangePasswordTestSuite -->
     </classes>

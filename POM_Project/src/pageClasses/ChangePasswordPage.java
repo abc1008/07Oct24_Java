@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utility.CaptureScreen;
+import utility.ExtentReportHelper;
 import utility.SeleniumEventHelpers;
 import utility.WaitHelpers;
 
@@ -59,27 +60,33 @@ public class ChangePasswordPage
 		try
 		{
 			SeleniumEventHelpers.DoClick(dropdownUser);
+		 	ExtentReportHelper.logInfo("Clicked on User dropdown.");
 			buttonChangePass.click();
+			ExtentReportHelper.logInfo("Clicked on Change Password option from dropdown.");
 			textBoxPassword.sendKeys("abcd@1234");
+			ExtentReportHelper.logInfo("Entered New Password");
 			textBoxConfPassword.sendKeys("abcd@1234");
+			ExtentReportHelper.logInfo("Entered Confirm Password");
 			buttonUpdate.click();
+			ExtentReportHelper.logInfo("Clicked on Update button");
+			
 
 			if (alertSuccess.size() > 0)
 			{
-				System.out.println("Password updated successfully");
+				ExtentReportHelper.logPass("Password updated successfully");
 				new WaitHelpers(driver).WaitForEleToBeInVisible(alertSuccessByXpath);
 				
 			} 
 			else
 			{
-				System.out.println("Failed to update Password.");
+				ExtentReportHelper.logFail("Failed to update Password.");
 				CaptureScreen.printScreen("TestFile", driver);
 				testResult = false;
 			}
 		}
 		catch (Exception ex) 
 		{
-			System.out.println("Exception found in method 'changePassword' : "+ex.getMessage());
+			ExtentReportHelper.logFail("Exception found in method 'changePassword' :"+ex.getMessage());
 			testResult = false;
 		}
 		

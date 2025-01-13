@@ -3,6 +3,7 @@ package testScriptClasses;
 import java.io.IOException;
 
 import basePack.BaseClass;
+import utility.ExtentReportHelper;
 import utility.TestometerObjects;
 
 public class ChangePasswordTestScript extends BaseClass
@@ -18,26 +19,28 @@ public class ChangePasswordTestScript extends BaseClass
 			{
 				if (TestometerObjects.changePasswordPage().changePassword() == true)
 				{
-					System.out.println("Password is updated successfully.");
+//					System.out.println("Password is updated successfully.");
+					ExtentReportHelper.logPass("Password is updated successfully.");
 					testResult = true;
 				} 
 				else
 				{
-					System.out.println("Failed to update password.");
+//					System.out.println("Failed to update password.");
+					ExtentReportHelper.logFail("Failed to update password.");
 				}
 			} 
 			else
 			{
-				System.out.println("Failed to click on New Version button.");
+//				System.out.println("Failed to click on New Version button.");
+				ExtentReportHelper.logFail("Failed to click on New Version button.");
 			}
 		}
 		catch (Exception ex) 
 		{
-			System.out.println("Exception found in method 'performChangePassword' : "+ex.getMessage());
+//			System.out.println("Exception found in method 'performChangePassword' : "+ex.getMessage());
+			ExtentReportHelper.logFail("Exception found in method 'performChangePassword' :"+ex.getMessage());
 			testResult = false;
 		}
-
-
 		return testResult;
 	}
 

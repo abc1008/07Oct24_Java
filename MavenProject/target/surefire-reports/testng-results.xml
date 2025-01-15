@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-01-15T21:06:57 IST" name="Suite" finished-at="2025-01-15T21:07:29 IST" duration-ms="32712">
+    <groups>
+    </groups>
+    <test started-at="2025-01-15T21:06:57 IST" name="Test" finished-at="2025-01-15T21:07:29 IST" duration-ms="32712">
+      <class name="testSuits.ChangePasswordTestSuite">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testSuits.ChangePasswordTestSuite@4a7f959b]" started-at="2025-01-15T21:06:57 IST" name="launchBrowser" finished-at="2025-01-15T21:07:00 IST" duration-ms="3379" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="login()[pri:0, instance:testSuits.ChangePasswordTestSuite@4a7f959b]" started-at="2025-01-15T21:07:00 IST" name="login" finished-at="2025-01-15T21:07:04 IST" duration-ms="3591" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="TC123_ChangePasswordTest()[pri:0, instance:testSuits.ChangePasswordTestSuite@4a7f959b]" started-at="2025-01-15T21:07:04 IST" name="TC123_ChangePasswordTest" finished-at="2025-01-15T21:07:24 IST" duration-ms="20323" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC123_ChangePasswordTest -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:testSuits.ChangePasswordTestSuite@4a7f959b]" started-at="2025-01-15T21:07:24 IST" name="logout" finished-at="2025-01-15T21:07:25 IST" duration-ms="913" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testSuits.ChangePasswordTestSuite@4a7f959b]" started-at="2025-01-15T21:07:25 IST" name="closeBrowser" finished-at="2025-01-15T21:07:29 IST" duration-ms="4447" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testSuits.ChangePasswordTestSuite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

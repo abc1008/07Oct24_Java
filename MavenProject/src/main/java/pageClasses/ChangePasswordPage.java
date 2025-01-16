@@ -19,7 +19,7 @@ import utility.WaitHelpers;
 public class ChangePasswordPage
 {
 	WebDriver driver;
-	private final String dropdownUserByID = "page-header-user-dropdown";
+	private final String dropdownUserByID = "page-header-user-dropdow";
 	private final String buttonChangePassByXpath = "//span[text()='Change Password']";
 	private final String textBoxPasswordByXpath = "//input[@name='password']";
 	private final String textBoxConfPasswordByXpath = "//input[@name='confirm_pass']";

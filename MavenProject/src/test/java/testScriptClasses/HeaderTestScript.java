@@ -1,4 +1,6 @@
 package testScriptClasses;
+import java.io.IOException;
+
 import app_objects.TestometerObjects;
 import basePack.BaseClass;
 import pageClasses.HeaderPage;
@@ -7,7 +9,7 @@ import utility.ExtentReportHelper;
 public class HeaderTestScript extends BaseClass
 {
 
-	public boolean performLogout()
+	public boolean performLogout() throws IOException
 	{
 		boolean testResult = false;
 		try

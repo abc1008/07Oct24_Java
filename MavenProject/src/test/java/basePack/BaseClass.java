@@ -2,7 +2,6 @@ package basePack;
 
 import java.io.IOException;
 import java.time.Duration;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -15,7 +14,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import testScriptClasses.HeaderTestScript;
-import testScriptClasses.LoginTestScript;
 import utility.CommonOps;
 import utility.ExtentReportHelper;
 
@@ -40,8 +38,7 @@ public class BaseClass
 		
 		driver.manage().window().maximize();
 		
-		ExtentReportHelper extentReportHelper = new ExtentReportHelper(dateTimeStamp);
-		ExtentReportHelper.startTest("Test_1");
+		ExtentReportHelper extentReportHelper = new ExtentReportHelper(dateTimeStamp, driver);
 		driver.get(CommonOps.readConfig("TestSiteURL"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
@@ -51,14 +48,12 @@ public class BaseClass
 	public void login() throws IOException
 	{
 
-		LoginTestScript loginTest = new LoginTestScript();
-		loginTest.performLogin();
 	}
 	
 	
 	
 	@AfterMethod
-	public void logout()
+	public void logout() throws IOException
 	{
 		HeaderTestScript hp = new HeaderTestScript();
 		hp.performLogout();

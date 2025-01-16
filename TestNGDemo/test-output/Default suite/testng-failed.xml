@@ -5,8 +5,15 @@
     <classes>
       <class name="testPack1.ListenerTest">
         <methods>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
           <include name="testCase1"/>
-          <include name="testCase2"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="afterTest"/>
         </methods>
       </class> <!-- testPack1.ListenerTest -->
     </classes>

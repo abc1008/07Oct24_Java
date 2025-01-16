@@ -1,5 +1,6 @@
 package pageClasses;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
@@ -43,7 +44,7 @@ public class HeaderPage
 	}
 
 	// methods
-	public boolean logout()
+	public boolean logout() throws IOException
 	{
 		boolean testResult = false;
 

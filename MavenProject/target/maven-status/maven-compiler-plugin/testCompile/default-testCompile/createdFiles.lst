@@ -1,0 +1,8 @@
+testSuits\ChangePasswordTestSuite.class
+app_objects\TestometerObjects.class
+basePack\ListenerClass.class
+testScriptClasses\DashboardTestScript.class
+testScriptClasses\HeaderTestScript.class
+testScriptClasses\LoginTestScript.class
+testScriptClasses\ChangePasswordTestScript.class
+basePack\BaseClass.class

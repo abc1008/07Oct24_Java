@@ -53,7 +53,6 @@ public class BaseClass
 	}
 	
 	
-	
 	@AfterMethod
 	public void logout() throws IOException
 	{

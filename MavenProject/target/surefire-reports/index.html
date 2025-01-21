@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\Trainings\TESTOMETER\07_OCT_2024_WEEKDAY_EVE\07_OCT_2024_WEEKDAY_EVE_GIT_LOCAL\07Oct24_Java\07Oct24_Java\MavenProject\maven_testng.xml</span>
+                    <span>D:\TESTOMETER_BATCHES\07Oct24_Java\MavenProject\maven_testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -130,10 +130,30 @@
                   <a name="TC123_ChangePasswordTest">
                   </a> <!-- TC123_ChangePasswordTest -->
                   <span class="method-name">TC123_ChangePasswordTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: TC123_ChangePasswordTest - Test Case failed. expected [true] but found [false]
-	at testSuits.ChangePasswordTestSuite.TC123_ChangePasswordTest(ChangePasswordTestSuite.java:14)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [009007d97f5f810cf1b3ab46ce23fcbc, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 132.0.2957.115, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55144}, msedge: {msedgedriverVersion: 132.0.2957.115 (f14150e8a7c..., userDataDir: C:\Users\DELL\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55144/devtoo..., se:cdpVersion: 132.0.2957.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 009007d97f5f810cf1b3ab46ce23fcbc
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:334)
+	at utility.ExtentReportHelper.printScreen(ExtentReportHelper.java:67)
+	at utility.ExtentReportHelper.logFail(ExtentReportHelper.java:44)
+	at pageClasses.LoginPage.login(LoginPage.java:65)
+	at testScriptClasses.LoginTestScript.performLogin(LoginTestScript.java:14)
+	at basePack.ListenerClass.onTestStart(ListenerClass.java:22)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 34 stack frames
+... Removed 33 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -142,7 +162,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Trainings\TESTOMETER\07_OCT_2024_WEEKDAY_EVE\07_OCT_2024_WEEKDAY_EVE_GIT_LOCAL\07Oct24_Java\07Oct24_Java\MavenProject\maven_testng.xml</span>
+            <span class="header-content">D:\TESTOMETER_BATCHES\07Oct24_Java\MavenProject\maven_testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -198,12 +218,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TC123_ChangePasswordTest')
 data.setCell(0, 2, 'testSuits.ChangePasswordTestSuite')
-data.setCell(0, 3, 18874);
+data.setCell(0, 3, 2692);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -236,21 +256,17 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">login</span>
-                <span class="method-start">9068 ms</span>
+                <span class="method-start">7325 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
+              <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">TC123_ChangePasswordTest</span>
-                <span class="method-start">9069 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
                 <span class="method-name">logout</span>
-                <span class="method-start">27953 ms</span>
+                <span class="method-start">10019 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">29923 ms</span>
+                <span class="method-start">10042 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
